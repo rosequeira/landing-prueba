@@ -1,0 +1,112 @@
+<div class="container">
+  <header>
+    <div class="content">
+      <div class="col-100 flex-space-even">
+        <div class="cont-img animate__animated animate__backInDown">
+          <img src="../assets/images/img_top_1.png" alt="" />
+        </div>
+        <div class="cont-img animate__animated animate__backInDown">
+          <img src="../assets/images/img_top_2.png" alt="" />
+        </div>
+        <div class="cont-img animate__animated animate__backInDown">
+          <img src="../assets/images/img_top_3.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="content mb-80">
+      <div class="col-100">
+        <div class="cont-buttons">
+          <app-button tipo="red" label="¿Qué puedo hacer?"></app-button>
+          <app-button
+            tipo="blue"
+            label="Recomendaciones Vacaciones"
+          ></app-button>
+          <app-button tipo="green" label="Beneficios"></app-button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="content">
+      <div class="col-50">
+        <div class="cont-download">
+          <p>
+            <span class="txt-red">Descarga la App BCI Móvil</span> y vive la
+            experiencia de llevar tu banco a todas partes.
+          </p>
+          <div class="group-icon">
+            <ng-container *ngFor="let o of listIcon">
+              <app-icon-bci
+                [label]="o.label"
+                [classIcon]="o.classIcon"
+              ></app-icon-bci>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="col-50">
+        <div class="cont-img">
+          <img src="../assets/images/img_phone.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="content">
+      <div class="col-100">
+        <div class="cont-footer">
+          <h2>
+            ¡Estas vacaciones cuídate del skimming y Clonación de tarjetas!
+          </h2>
+          <div class="group-consejos">
+            <div class="item">
+              <div class="images">
+                <img src="../assets/images/icon_footer-1.jpg" alt="" />
+              </div>
+              <div class="cont-text">
+                <h3>Consejo 1</h3>
+                <p>
+                  Realiza directamente tus transacciones o mantén tu tarjeta a
+                  la vista todo el tiempo
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="images">
+                <img src="../assets/images/icon_footer-2.jpg" alt="" />
+              </div>
+              <div class="cont-text">
+                <h3>Consejo 2</h3>
+                <p>
+                  Cuando uses cajeros automáticos cubre con tu mano la
+                  contraseña
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="images">
+                <img src="../assets/images/icon_footer-3.jpg" alt="" />
+              </div>
+              <div class="cont-text">
+                <h3>Consejo 3</h3>
+                <p>Nunca permitas que fotografíen tus tarjetas</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="images">
+                <img src="../assets/images/icon_footer-4.jpg" alt="" />
+              </div>
+              <div class="cont-text">
+                <h3>Consejo 4</h3>
+                <p>No des nunca tu clave en voz alta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

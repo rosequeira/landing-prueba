@@ -1,0 +1,48 @@
+body {
+  background: url(../../assets/images/bg_bci.jpg);
+}
+.container {
+  width: min(100%, 1200px);
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+
+  @include xs {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-space-even {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.col-100 {
+  width: 100%;
+}
+.col-50 {
+  width: 50%;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+.mb-80 {
+  margin-bottom: 8rem;
+
+  @include xs {
+    margin-bottom: 4rem;
+  }
+}
+
+@include xs {
+  [class*="col-"] {
+    width: 100%;
+  }
+}

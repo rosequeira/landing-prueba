@@ -1,0 +1,64 @@
+@import "./src/scss/abstracts/mixins";
+@import "./src/scss/abstracts/variables";
+
+// prettier-ignore
+$list:
+top 0,
+top 175,
+top 352,
+top 528px,
+bottom 0,
+bottom 175,
+bottom 352,
+bottom 528px
+;
+
+.cont-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include md {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 110%;
+  }
+
+  .icon-img {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    overflow: hidden;
+    margin: 0 auto 0.6rem;
+
+    @include md {
+      transform: scale(0.7);
+      margin: 0 auto 0;
+    }
+
+    img {
+      position: absolute;
+      width: 600px;
+      height: auto;
+      min-width: 600px;
+      @each $posit, $hori in $list {
+        $symbol: if($hori==0, "", "-");
+        $pos: if($posit==top, "top", "bottom");
+        $i: index($list, $posit $hori);
+
+        &.im#{$i} {
+          #{$pos}: 0;
+          left: #{$symbol}#{$hori}px;
+        }
+      }
+    }
+  }
+}
